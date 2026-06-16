@@ -1,0 +1,33 @@
+/* Cadence — Spacing, radii & elevation tokens
+ * 4px base unit. Use only these steps for padding, gaps, margins. */
+
+:root {
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Section vertical rhythm */
+  --section-y-desktop: 88px;
+  --section-y-mobile: 56px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;     /* pills (inner), small chips */
+  --radius-md: 10px;    /* inputs */
+  --radius-lg: 12px;    /* buttons, banners */
+  --radius-xl: 16px;    /* cards */
+  --radius-2xl: 24px;   /* sheets, hero panels */
+  --radius-pill: 999px; /* status pills, avatars */
+
+  /* ---- Elevation (light surfaces only) ---- */
+  --shadow-card: 0 2px 8px rgba(20, 19, 43, 0.06), 0 12px 32px rgba(20, 19, 43, 0.05);
+  --shadow-card-hover: 0 4px 12px rgba(20, 19, 43, 0.08), 0 18px 44px rgba(20, 19, 43, 0.07);
+  --shadow-sheet: 0 8px 24px rgba(20, 19, 43, 0.12), 0 32px 64px rgba(20, 19, 43, 0.10);
+}

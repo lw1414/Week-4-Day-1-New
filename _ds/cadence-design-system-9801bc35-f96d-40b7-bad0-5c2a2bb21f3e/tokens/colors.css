@@ -1,0 +1,98 @@
+/* Cadence — Color tokens
+ * The night-to-dawn ramp. Base palette + semantic aliases.
+ * Surfaces move from deep indigo "night" toward warm "dawn" paper. */
+
+:root {
+  /* ---- Accent: Dawn (warmth, primary actions) ---- */
+  --dawn-600: #E5764F;
+  --dawn-500: #FF9E7A;
+  --dawn-300: #FFC9A8;
+  --dawn-100: #FFE6D8;
+
+  /* ---- Accent: Signal (life, vitals, trust) ---- */
+  --signal-600: #1E9C82;
+  --signal-500: #2BB89A;
+  --signal-400: #6FE3C9;
+  --signal-100: #D7F6EF;
+
+  /* ---- Accent: Lilac (quiet third, for night surfaces) ---- */
+  --lilac-400: #B8B6E8;
+  --lilac-200: #E2E1F6;
+
+  /* ---- Neutrals: night-to-dawn ramp ---- */
+  --night-900: #14132B;
+  --night-800: #201E3D;
+  --night-700: #2D2A4F;
+  --night-600: #46436A;
+  --ink-500: #6E6A82;
+  --ink-400: #9A96AC;
+  --ink-300: #C9C5D4;
+  --ink-200: #E7E2DC;
+  --paper-100: #F3EAE0;
+  --paper-50: #FBF6F0;
+  --white: #FFFFFF;
+
+  /* ---- Status: soft, non-alarming pairs ---- */
+  --positive-solid: #2E9E6E;
+  --positive-soft: #DDF3E8;
+  --caution-solid: #C9871F;
+  --caution-soft: #FCEFD6;
+  --alert-solid: #D9523C;
+  --alert-soft: #FBE0DB;
+  --info-solid: #5B79D6;
+  --info-soft: #E3E9FB;
+
+  /* ============================================================
+   * SEMANTIC ALIASES — light surfaces (default)
+   * ============================================================ */
+  --bg-page: var(--paper-50);
+  --bg-section: var(--paper-100);
+  --surface-card: var(--white);
+  --surface-input: var(--white);
+  --border-card: var(--ink-200);
+  --border-input: var(--ink-300);
+  --border-divider: var(--ink-300);
+
+  --text-strong: var(--night-900);
+  --text-body: var(--night-900);
+  --text-secondary: var(--ink-500);
+  --text-placeholder: var(--ink-400);
+  --text-disabled: var(--ink-400);
+
+  --accent-primary: var(--dawn-500);
+  --accent-primary-hover: var(--dawn-600);
+  --accent-primary-text: var(--night-900);
+  --accent-ghost-text: var(--dawn-600);
+  --accent-ghost-hover: var(--dawn-100);
+
+  --vital: var(--signal-500);
+  --vital-strong: var(--signal-600);
+  --waveform: var(--signal-400);
+  --focus-ring: var(--signal-500);
+  --insight-bg: var(--signal-100);
+
+  --link: var(--signal-600);
+}
+
+/* ============================================================
+ * NIGHT SCOPE — apply on dark surfaces / hero sections
+ * ============================================================ */
+.cadence-night {
+  --bg-page: var(--night-900);
+  --bg-section: var(--night-900);
+  --surface-card: var(--night-800);
+  --surface-input: var(--night-800);
+  --border-card: var(--night-700);
+  --border-input: var(--night-700);
+  --border-divider: var(--night-700);
+
+  --text-strong: var(--paper-50);
+  --text-body: var(--paper-50);
+  --text-secondary: var(--lilac-200);
+  --text-placeholder: var(--night-600);
+  --text-disabled: var(--night-600);
+
+  --accent-ghost-text: var(--dawn-500);
+  --accent-ghost-hover: rgba(255, 158, 122, 0.12);
+  --link: var(--lilac-400);
+}

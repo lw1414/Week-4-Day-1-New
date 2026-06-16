@@ -1,0 +1,12 @@
+<svg width="560" height="160" viewBox="0 0 560 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadence logo reversed">
+  <defs>
+    <linearGradient id="markGradRev" x1="24" y1="80" x2="136" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6FE3C9"></stop>
+      <stop offset="70%" stop-color="#6FE3C9"></stop>
+      <stop offset="100%" stop-color="#FF9E7A"></stop>
+    </linearGradient>
+  </defs>
+  <circle cx="80" cy="80" r="54" stroke="#46436A" stroke-width="4" fill="none"></circle>
+  <path d="M40 88 H66 L78 56 L92 104 L102 80 H120" stroke="url(#markGradRev)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+  <text x="166" y="102" font-family="Fraunces, &#39;Times New Roman&#39;, serif" font-size="78" font-weight="600" letter-spacing="-2" fill="#FBF6F0">Cadence</text>
+</svg>

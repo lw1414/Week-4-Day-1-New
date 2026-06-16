@@ -1,0 +1,55 @@
+/* Cadence — Base reset & type utility classes
+ * Optional helpers that map the type scale to classes. Components use tokens
+ * directly; these classes are convenient for cards, kits, and prose. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+  color: var(--text-body);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Display (Fraunces) ---- */
+.cad-display-xl, .cad-display-l, .cad-display-m, .cad-heading {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-optical-sizing: auto;
+  color: var(--text-strong);
+  margin: 0;
+  text-wrap: balance;
+}
+.cad-display-xl { font-size: var(--display-xl-size); line-height: var(--display-xl-line); letter-spacing: var(--display-xl-track); }
+.cad-display-l  { font-size: var(--display-l-size);  line-height: var(--display-l-line);  letter-spacing: var(--display-l-track); }
+.cad-display-m  { font-size: var(--display-m-size);  line-height: var(--display-m-line);  letter-spacing: var(--display-m-track); }
+.cad-heading    { font-size: var(--heading-size);    line-height: var(--heading-line);    letter-spacing: var(--heading-track); }
+
+/* ---- Body (Hanken Grotesk) ---- */
+.cad-lead    { font-family: var(--font-body); font-size: var(--lead-size);   line-height: var(--lead-line);   font-weight: var(--lead-weight); margin: 0; }
+.cad-body    { font-family: var(--font-body); font-size: var(--body-size);   line-height: var(--body-line);   font-weight: var(--body-weight); margin: 0; }
+.cad-body-s  { font-family: var(--font-body); font-size: var(--body-s-size); line-height: var(--body-s-line); font-weight: var(--body-s-weight); margin: 0; }
+.cad-caption { font-family: var(--font-body); font-size: var(--caption-size); line-height: var(--caption-line); font-weight: var(--caption-weight); color: var(--text-secondary); margin: 0; }
+
+/* ---- Data (IBM Plex Mono) ---- */
+.cad-metric-xl { font-family: var(--font-mono); font-size: var(--metric-xl-size); line-height: var(--metric-xl-line); font-weight: var(--metric-xl-weight); color: var(--text-strong); margin: 0; }
+.cad-metric    { font-family: var(--font-mono); font-size: var(--metric-size);    line-height: var(--metric-line);    font-weight: var(--metric-weight);    color: var(--text-strong); margin: 0; }
+.cad-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--eyebrow-size);
+  line-height: var(--eyebrow-line);
+  font-weight: var(--eyebrow-weight);
+  letter-spacing: var(--eyebrow-track);
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .cad-display-xl { font-size: 40px; line-height: 44px; }
+  .cad-display-l  { font-size: 32px; line-height: 36px; }
+}

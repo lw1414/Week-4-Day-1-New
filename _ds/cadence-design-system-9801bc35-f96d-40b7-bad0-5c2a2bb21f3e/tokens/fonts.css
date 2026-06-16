@@ -1,0 +1,9 @@
+/* Cadence — Webfonts
+ *
+ * NOTE: No font binaries were supplied with the brand kit. All three families
+ * (Fraunces, Hanken Grotesk, IBM Plex Mono) are official Google Fonts and are
+ * loaded from the Google Fonts CDN below. If you have licensed/self-hosted
+ * binaries, replace this @import with local @font-face rules and ship the
+ * files alongside this stylesheet. */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
