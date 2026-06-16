@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/styles.css">
+  <script src="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/_ds_bundle.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--night-900); }
+    *::selection { background: rgba(255,158,122,.28); }
+  </style>
+</helmet>
+
+<div class="cadence-night" style="background:var(--night-900);min-height:100vh;font-family:var(--font-body);color:var(--text-body);">
+
+  <x-import component-from-global-scope="CadenceDesignSystem_9801bc.TopBar" night="{{ true }}" logo="{{ logo }}" links="{{ navLinks }}" on-nav-click="{{ handleNav }}" cta="{{ ctaButton }}" hint-size="100%,64px"></x-import>
+
+  <section style="background:radial-gradient(120% 95% at 72% 8%, var(--night-800), var(--night-900) 62%);border-bottom:1px solid var(--night-700);">
+    <div style="max-width:900px;margin:0 auto;padding:76px 32px 68px;">
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);font-weight:500;">Contact</span>
+      <h1 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:54px;letter-spacing:-1.5px;color:var(--text-strong);margin:14px 0 18px;text-wrap:balance;">Talk to us.</h1>
+      <p style="font-family:var(--font-body);font-size:20px;line-height:30px;color:var(--text-secondary);margin:0;max-width:600px;">Whether you're stuck, curious, or have feedback on Cadence, our care team reads every message — and answers like a person, not a ticket.</p>
+    </div>
+  </section>
+
+  <section>
+    <div style="max-width:1000px;margin:0 auto;padding:80px 32px;">
+      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start;">
+
+        <div style="display:flex;flex-direction:column;gap:28px;">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:8px;">Email us</div>
+            <a href="mailto:hello@cadence.health" style="font-family:var(--font-display);font-weight:600;font-size:22px;color:var(--text-strong);text-decoration:none;">hello@cadence.health</a>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:8px;">Typical response</div>
+            <p style="font-family:var(--font-body);font-size:16px;line-height:25px;color:var(--text-secondary);margin:0;">Within one business day. Care-plan members get priority replies.</p>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:8px;">Hours</div>
+            <p style="font-family:var(--font-body);font-size:16px;line-height:25px;color:var(--text-secondary);margin:0;">Mon–Fri, 8am–6pm ET</p>
+          </div>
+          <p style="font-family:var(--font-body);font-size:14px;line-height:22px;color:var(--text-secondary);margin:0;opacity:.85;">For anything urgent or medical, please contact your clinician or local emergency services. Cadence spots patterns — it doesn't diagnose.</p>
+        </div>
+
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,420px">
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:18px;">
+              <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Input" label="Your name" placeholder="Jordan Avery" value="{{ name }}" on-change="{{ onName }}" error="{{ nameErr }}" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Input" label="Email" placeholder="you@example.com" value="{{ email }}" on-change="{{ onEmail }}" error="{{ emailErr }}" hint-size="100%,72px"></x-import>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <label style="font-family:var(--font-body);font-size:13px;line-height:18px;font-weight:500;color:var(--text-secondary);">How can we help?</label>
+                <textarea placeholder="Tell us what's on your mind…" value="{{ message }}" onChange="{{ onMessage }}" style="{{ textareaStyle }}"></textarea>
+                <sc-if value="{{ messageErr }}" hint-placeholder-val="">
+                  <span style="font-family:var(--font-body);font-size:14px;line-height:22px;color:var(--alert-solid);">{{ messageErr }}</span>
+                </sc-if>
+              </div>
+              <div>
+                <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="primary" size="lg" on-click="{{ submit }}" hint-size="150px,48px">Send message</x-import>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Banner" variant="positive" title="Thanks — your message is on its way." hint-size="100%,72px">We'll reply to {{ email }} within a business day. Take care.</x-import>
+              <div><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ reset }}" hint-size="150px,40px">Send another</x-import></div>
+            </div>
+          </sc-if>
+        </x-import>
+
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1120, &quot;height&quot;: 800}}">
+class Component extends DCLogic {
+  state = { ready: false, name: "", email: "", message: "", nameErr: "", emailErr: "", messageErr: "", sent: false };
+  go(href) { window.location.href = href; }
+  componentDidMount() { this._t = 0; this.waitBundle(); }
+  waitBundle() {
+    const NS = window.CadenceDesignSystem_9801bc;
+    if (NS && NS.Button) { this.setState({ ready: true }); return; }
+    if (this._t++ > 50) return;
+    setTimeout(() => this.waitBundle(), 100);
+  }
+  submit() {
+    const name = (this.state.name || "").trim();
+    const email = (this.state.email || "").trim();
+    const message = (this.state.message || "").trim();
+    const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+    const errs = {
+      nameErr: name ? "" : "Please tell us your name.",
+      emailErr: emailOk ? "" : "Enter a valid email so we can reply.",
+      messageErr: message.length >= 4 ? "" : "A few words about what you need.",
+    };
+    if (errs.nameErr || errs.emailErr || errs.messageErr) { this.setState(errs); return; }
+    this.setState({ ...errs, sent: true });
+  }
+  reset() { this.setState({ name: "", email: "", message: "", nameErr: "", emailErr: "", messageErr: "", sent: false }); }
+  renderVals() {
+    const NS = window.CadenceDesignSystem_9801bc || {};
+    const L = "Cadence Landing.dc.html";
+    const map = { "How it works": "how", "Features": "features", "Privacy": "privacy", "Pricing": "pricing", "FAQ": "faq" };
+    const logo = React.createElement("a", { href: L, style: { display: "inline-flex" } },
+      React.createElement("img", { src: "assets/cadence-logo-reversed.svg", alt: "Cadence", style: { height: "44px", display: "block" } }));
+    const ctaButton = NS.Button
+      ? React.createElement(NS.Button, { variant: "primary", size: "sm", onClick: () => this.go(L + "#cta") }, "Join waitlist")
+      : null;
+    return {
+      navLinks: Object.keys(map),
+      logo,
+      ctaButton,
+      handleNav: (l) => this.go(L + "#" + (map[l] || "top")),
+      name: this.state.name, email: this.state.email, message: this.state.message,
+      nameErr: this.state.nameErr, emailErr: this.state.emailErr, messageErr: this.state.messageErr,
+      onName: (e) => this.setState({ name: e.target.value, nameErr: "" }),
+      onEmail: (e) => this.setState({ email: e.target.value, emailErr: "" }),
+      onMessage: (e) => this.setState({ message: e.target.value, messageErr: "" }),
+      submit: () => this.submit(),
+      reset: () => this.reset(),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      textareaStyle: {
+        width: "100%", minHeight: "120px", resize: "vertical", padding: "12px 16px",
+        borderRadius: "var(--radius-md)", border: "1px solid var(--ink-300)", background: "var(--white)",
+        color: "var(--night-900)", fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: "24px",
+        boxSizing: "border-box", outline: "none",
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

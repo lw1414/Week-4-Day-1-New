@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/styles.css">
+  <script src="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/_ds_bundle.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--night-900); }
+    *::selection { background: rgba(255,158,122,.28); }
+  </style>
+</helmet>
+
+<div class="cadence-night" style="background:var(--night-900);min-height:100vh;font-family:var(--font-body);color:var(--text-body);">
+
+  <x-import component-from-global-scope="CadenceDesignSystem_9801bc.TopBar" night="{{ true }}" logo="{{ logo }}" links="{{ navLinks }}" on-nav-click="{{ handleNav }}" cta="{{ ctaButton }}" hint-size="100%,64px"></x-import>
+
+  <section style="background:radial-gradient(120% 95% at 72% 8%, var(--night-800), var(--night-900) 62%);border-bottom:1px solid var(--night-700);">
+    <div style="max-width:900px;margin:0 auto;padding:76px 32px 68px;">
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);font-weight:500;">Careers</span>
+      <h1 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:54px;letter-spacing:-1.5px;color:var(--text-strong);margin:14px 0 18px;text-wrap:balance;">Help people wake up knowing more.</h1>
+      <p style="font-family:var(--font-body);font-size:20px;line-height:30px;color:var(--text-secondary);margin:0;max-width:600px;">We're a small team building a calm, honest health companion. If you care about clarity, privacy and design that earns trust, we'd love to meet you.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section style="border-bottom:1px solid var(--night-700);">
+    <div style="max-width:1120px;margin:0 auto;padding:80px 32px;">
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);font-weight:500;">Why Cadence</span>
+      <h2 style="font-family:var(--font-display);font-weight:600;font-size:32px;line-height:38px;letter-spacing:-0.5px;color:var(--text-strong);margin:12px 0 32px;max-width:600px;">Work that stays calm and means something.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,180px">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Real impact</h3>
+            <p style="font-family:var(--font-body);font-size:15px;line-height:24px;color:var(--text-secondary);margin:0;">Your work helps people — often older, often managing a condition — walk into appointments knowing more.</p>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,180px">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Calm by design</h3>
+            <p style="font-family:var(--font-body);font-size:15px;line-height:24px;color:var(--text-secondary);margin:0;">We move with intent, not urgency. Deep work, honest feedback, and no manufactured fire drills.</p>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,180px">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Privacy first</h3>
+            <p style="font-family:var(--font-body);font-size:15px;line-height:24px;color:var(--text-secondary);margin:0;">We hold a high bar for how we treat people's data — and we build like the people we serve are watching.</p>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN ROLES -->
+  <section style="border-bottom:1px solid var(--night-700);">
+    <div style="max-width:900px;margin:0 auto;padding:80px 32px;">
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);font-weight:500;">Open roles</span>
+      <h2 style="font-family:var(--font-display);font-weight:600;font-size:32px;line-height:38px;letter-spacing:-0.5px;color:var(--text-strong);margin:12px 0 28px;">Five ways to join.</h2>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--text-strong);margin-bottom:8px;">Senior Product Designer</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;"><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="80px,26px">Design</x-import><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="90px,26px">Remote</x-import></div>
+            </div>
+            <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ goContact }}" hint-size="96px,40px">Apply</x-import>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--text-strong);margin-bottom:8px;">Machine Learning Engineer, Signals</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;"><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="100px,26px">Engineering</x-import><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="90px,26px">Remote</x-import></div>
+            </div>
+            <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ goContact }}" hint-size="96px,40px">Apply</x-import>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--text-strong);margin-bottom:8px;">Clinical Research Lead</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;"><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="80px,26px">Clinical</x-import><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="110px,26px">Hybrid · Boston</x-import></div>
+            </div>
+            <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ goContact }}" hint-size="96px,40px">Apply</x-import>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--text-strong);margin-bottom:8px;">Content &amp; Brand Writer</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;"><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="80px,26px">Brand</x-import><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="90px,26px">Remote</x-import></div>
+            </div>
+            <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ goContact }}" hint-size="96px,40px">Apply</x-import>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:600;font-size:20px;color:var(--text-strong);margin-bottom:8px;">Customer Care Specialist</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;"><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="80px,26px">Support</x-import><x-import component-from-global-scope="CadenceDesignSystem_9801bc.Tag" hint-size="90px,26px">Remote</x-import></div>
+            </div>
+            <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="secondary" size="md" on-click="{{ goContact }}" hint-size="96px,40px">Apply</x-import>
+          </div>
+        </x-import>
+      </div>
+      <p style="font-family:var(--font-body);font-size:15px;line-height:24px;color:var(--text-secondary);margin:24px 0 0;">Don't see your role? We're always glad to meet thoughtful people — <a href="Contact.dc.html" style="color:var(--lilac-400);">say hello</a>.</p>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1120, &quot;height&quot;: 800}}">
+class Component extends DCLogic {
+  state = { ready: false };
+  go(href) { window.location.href = href; }
+  componentDidMount() { this._t = 0; this.waitBundle(); }
+  waitBundle() {
+    const NS = window.CadenceDesignSystem_9801bc;
+    if (NS && NS.Button) { this.setState({ ready: true }); return; }
+    if (this._t++ > 50) return;
+    setTimeout(() => this.waitBundle(), 100);
+  }
+  renderVals() {
+    const NS = window.CadenceDesignSystem_9801bc || {};
+    const L = "Cadence Landing.dc.html";
+    const map = { "How it works": "how", "Features": "features", "Privacy": "privacy", "Pricing": "pricing", "FAQ": "faq" };
+    const logo = React.createElement("a", { href: L, style: { display: "inline-flex" } },
+      React.createElement("img", { src: "assets/cadence-logo-reversed.svg", alt: "Cadence", style: { height: "44px", display: "block" } }));
+    const ctaButton = NS.Button
+      ? React.createElement(NS.Button, { variant: "primary", size: "sm", onClick: () => this.go(L + "#cta") }, "Join waitlist")
+      : null;
+    return {
+      navLinks: Object.keys(map),
+      logo,
+      ctaButton,
+      handleNav: (l) => this.go(L + "#" + (map[l] || "top")),
+      goContact: () => this.go("Contact.dc.html"),
+    };
+  }
+}
+</script>
+</body>
+</html>

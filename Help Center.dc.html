@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/styles.css">
+  <script src="_ds/cadence-design-system-9801bc35-f96d-40b7-bad0-5c2a2bb21f3e/_ds_bundle.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--night-900); }
+    *::selection { background: rgba(255,158,122,.28); }
+  </style>
+</helmet>
+
+<div class="cadence-night" style="background:var(--night-900);min-height:100vh;font-family:var(--font-body);color:var(--text-body);">
+
+  <x-import component-from-global-scope="CadenceDesignSystem_9801bc.TopBar" night="{{ true }}" logo="{{ logo }}" links="{{ navLinks }}" on-nav-click="{{ handleNav }}" cta="{{ ctaButton }}" hint-size="100%,64px"></x-import>
+
+  <section style="background:radial-gradient(120% 95% at 72% 8%, var(--night-800), var(--night-900) 62%);border-bottom:1px solid var(--night-700);">
+    <div style="max-width:900px;margin:0 auto;padding:76px 32px 68px;">
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary);font-weight:500;">Help center</span>
+      <h1 style="font-family:var(--font-display);font-weight:600;font-size:52px;line-height:54px;letter-spacing:-1.5px;color:var(--text-strong);margin:14px 0 18px;text-wrap:balance;">How can we help?</h1>
+      <p style="font-family:var(--font-body);font-size:20px;line-height:30px;color:var(--text-secondary);margin:0;max-width:600px;">Find your way around Cadence, connect a device, and understand what your insights mean. Most answers live here — and we're a message away for the rest.</p>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section style="border-bottom:1px solid var(--night-700);">
+    <div style="max-width:1120px;margin:0 auto;padding:80px 32px;">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,200px">
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Getting started</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="Cadence Landing.dc.html#how" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">How Cadence works</a>
+              <a href="Cadence Landing.dc.html#cta" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Setting up your account</a>
+              <a href="Cadence Landing.dc.html#features" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Reading your first insight</a>
+            </div>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,200px">
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Connecting devices</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="Cadence Landing.dc.html#faq" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Which devices are supported</a>
+              <a href="Cadence Landing.dc.html#faq" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Pairing a wearable or ring</a>
+              <a href="Contact.dc.html" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Troubleshooting a connection</a>
+            </div>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,200px">
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Your data &amp; privacy</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="Privacy.dc.html" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Who can see my data</a>
+              <a href="Privacy.dc.html" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Exporting or deleting data</a>
+              <a href="Cadence Landing.dc.html#faq" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Sharing with my doctor</a>
+            </div>
+          </div>
+        </x-import>
+        <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Card" night="{{ true }}" hint-size="100%,200px">
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <h3 style="font-family:var(--font-display);font-weight:600;font-size:21px;line-height:25px;color:var(--text-strong);margin:0;">Billing &amp; plans</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="Cadence Landing.dc.html#pricing" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Comparing Free, Plus &amp; Care</a>
+              <a href="Cadence Landing.dc.html#pricing" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Changing or cancelling a plan</a>
+              <a href="Contact.dc.html" style="font-family:var(--font-body);font-size:15px;color:var(--lilac-200);text-decoration:none;">Billing questions</a>
+            </div>
+          </div>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- STILL NEED HELP -->
+  <section>
+    <div style="max-width:1120px;margin:0 auto;padding:80px 32px;">
+      <div style="border:1px solid var(--night-700);border-radius:24px;background:radial-gradient(120% 140% at 50% 0%, var(--night-800), var(--night-900) 70%);padding:48px;text-align:center;">
+        <h2 style="font-family:var(--font-display);font-weight:600;font-size:32px;line-height:36px;letter-spacing:-0.5px;color:var(--text-strong);margin:0 0 12px;">Still need help?</h2>
+        <p style="font-family:var(--font-body);font-size:17px;line-height:27px;color:var(--text-secondary);margin:0 auto 28px;max-width:420px;">Our care team reads every message and usually replies within a day.</p>
+        <div style="display:flex;justify-content:center;">
+          <x-import component-from-global-scope="CadenceDesignSystem_9801bc.Button" variant="primary" size="lg" on-click="{{ goContact }}" hint-size="150px,48px">Contact us</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1120, &quot;height&quot;: 800}}">
+class Component extends DCLogic {
+  state = { ready: false };
+  go(href) { window.location.href = href; }
+  componentDidMount() { this._t = 0; this.waitBundle(); }
+  waitBundle() {
+    const NS = window.CadenceDesignSystem_9801bc;
+    if (NS && NS.Button) { this.setState({ ready: true }); return; }
+    if (this._t++ > 50) return;
+    setTimeout(() => this.waitBundle(), 100);
+  }
+  renderVals() {
+    const NS = window.CadenceDesignSystem_9801bc || {};
+    const L = "Cadence Landing.dc.html";
+    const map = { "How it works": "how", "Features": "features", "Privacy": "privacy", "Pricing": "pricing", "FAQ": "faq" };
+    const logo = React.createElement("a", { href: L, style: { display: "inline-flex" } },
+      React.createElement("img", { src: "assets/cadence-logo-reversed.svg", alt: "Cadence", style: { height: "44px", display: "block" } }));
+    const ctaButton = NS.Button
+      ? React.createElement(NS.Button, { variant: "primary", size: "sm", onClick: () => this.go(L + "#cta") }, "Join waitlist")
+      : null;
+    return {
+      navLinks: Object.keys(map),
+      logo,
+      ctaButton,
+      handleNav: (l) => this.go(L + "#" + (map[l] || "top")),
+      goContact: () => this.go("Contact.dc.html"),
+    };
+  }
+}
+</script>
+</body>
+</html>
